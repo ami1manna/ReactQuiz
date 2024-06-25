@@ -15,6 +15,15 @@ const Question = ({
         }
     );
 
+    let timer = 10000;
+
+    if(answer.selectedAnswer){
+        timer = 1000
+    }
+    if(answer.isCorrect!==null){
+        timer = 2000;
+    }
+
     function handleSelectAnswer(answer){
         setAnswer({
             selectedAnswer: answer,
@@ -41,9 +50,10 @@ const Question = ({
     <div id="question">
     {/* key will mout new and unmount old one */}
     <QuestionTimer 
-    
-    timeout={10000} 
-    onTimeout={onSkipAnswer} />
+    key={timer}
+    mode={answerState}
+    timeout={timer} 
+    onTimeout={answer.selectedAnswer === '' ? onSkipAnswer:null} />
 
     <h2>
         {QUESTIONS[index].text}

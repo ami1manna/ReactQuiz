@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 
-const QuestionTimer = ({timeout,onTimeout}) => {
+const QuestionTimer = ({timeout,onTimeout,mode}) => {
     const [remainingTime,setRemainingTime] = useState(timeout);
     
     useEffect(()=>{
@@ -20,7 +20,7 @@ const QuestionTimer = ({timeout,onTimeout}) => {
     },[]); //useEffect
     
 
-    return <progress id='question-timer' max={timeout} value={remainingTime}/>
+    return <progress id='question-timer' max={timeout} value={remainingTime} className={mode}/>
             
 }
 
