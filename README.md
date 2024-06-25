@@ -1,5 +1,5 @@
 <h2>Quiz Application Screenshots</h2>
-
+<h1><a href="https://reactqquiz.netlify.app/">Website Link</a></h1>
 <table>
   <tr>
     <td>
@@ -19,4 +19,4 @@
   </tr>
   
 </table>
-<h1><a href="https://reactqquiz.netlify.app/">Website Link</a></h1>
+
